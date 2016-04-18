@@ -1,4 +1,4 @@
-package com.demo;
+ï»¿package com.demo;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -24,15 +24,15 @@ import javax.swing.ImageIcon;
 
 public class FiveChessFrame extends JFrame{
 
-	//»ñÈ¡ÆÁÄ»¿í¶È
+	//è·å–å±å¹•å®½åº¦
 	int width = Toolkit.getDefaultToolkit().getScreenSize().width;
-	//»ñÈ¡ÆÁÄ»¸ß¶È
+	//è·å–å±å¹•é«˜åº¦
 	int height = Toolkit.getDefaultToolkit().getScreenSize().height;
-/*	//±³¾°Í¼Æ¬
+/*	//èƒŒæ™¯å›¾ç‰‡
 	BufferedImage bgimg = null;
 	BufferedImage blackc = null;
 	BufferedImage whitec = null;
-	//´æ´¢ËùÓĞÆå×ÓµÄÎ»ÖÃ£¬0Îª¿Õ£¬1ÎªºÚ×Ó£¬2Îª°××Ó
+	//å­˜å‚¨æ‰€æœ‰æ£‹å­çš„ä½ç½®ï¼Œ0ä¸ºç©ºï¼Œ1ä¸ºé»‘å­ï¼Œ2ä¸ºç™½å­
 	int[][] allchess = new int[15][15];
 	int x = 0;
 	int y = 0;
@@ -41,23 +41,23 @@ public class FiveChessFrame extends JFrame{
 	
 	
 	public FiveChessFrame(){
-		//ÉèÖÃ±êÌâ
-		this.setTitle("Îå×ÓÆåÓÎÏ·");
-		//ÉèÖÃ´°Ìå´óĞ¡
+		//è®¾ç½®æ ‡é¢˜
+		this.setTitle("äº”å­æ£‹æ¸¸æˆ");
+		//è®¾ç½®çª—ä½“å¤§å°
 		this.setSize(500, 550);
-		//ÉèÖÃ´°ÌåÎ»ÖÃ
+		//è®¾ç½®çª—ä½“ä½ç½®
 		this.setLocation((width-500)/2, (height-500)/2);
-		//ÉèÖÃ´°Ìå´óĞ¡²»¿É±ä
+		//è®¾ç½®çª—ä½“å¤§å°ä¸å¯å˜
 		this.setResizable(false);
-		//ÉèÖÃ´°ÌåµÄ¹Ø±Õ·½Ê½Îª¹Ø±Õ³ÌĞò×Ô¶¯½áÊø
+		//è®¾ç½®çª—ä½“çš„å…³é—­æ–¹å¼ä¸ºå…³é—­ç¨‹åºè‡ªåŠ¨ç»“æŸ
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//½¨Á¢Ö÷½çÃæpanel£¬ÓÃÓÚ»­ÆåÅÌºÍÆå×Ó
+		//å»ºç«‹ä¸»ç•Œé¢panelï¼Œç”¨äºç”»æ£‹ç›˜å’Œæ£‹å­
 		majorpanel panel = new majorpanel();
-		//¼ÓÈëÖ÷½çÃæpanelÊó±ê¼àÌıÆ÷
+		//åŠ å…¥ä¸»ç•Œé¢panelé¼ æ ‡ç›‘å¬å™¨
 		this.addMouseListener(panel);
-		//½«Ö÷½çÃæpanel·ÅÈëJFrame£¬Î»ÖÃÕıÖĞ
+		//å°†ä¸»ç•Œé¢panelæ”¾å…¥JFrameï¼Œä½ç½®æ­£ä¸­
 		getContentPane().add(panel, BorderLayout.CENTER);
-		//½¨Á¢buttonµÄpanel£¬ÓÃÓÚ´æ·Åµ×¶ËµÄ3¸öbutton£¬ÉèÖÃ±³¾°Í¼Æ¬¡£
+		//å»ºç«‹buttonçš„panelï¼Œç”¨äºå­˜æ”¾åº•ç«¯çš„3ä¸ªbuttonï¼Œè®¾ç½®èƒŒæ™¯å›¾ç‰‡ã€‚
 		JPanel bpanel = new JPanel(){
 			@Override  
             protected void paintComponent(Graphics g) {  
@@ -66,21 +66,21 @@ public class FiveChessFrame extends JFrame{
                 g.drawImage(img, 0, 0, icon.getIconWidth(), icon.getIconHeight(), icon.getImageObserver());  
             } 
 		};
-		//½«µ×¶Ëbpanel·ÅÈëJFrame£¬Î»ÖÃÎªÏÂ
+		//å°†åº•ç«¯bpanelæ”¾å…¥JFrameï¼Œä½ç½®ä¸ºä¸‹
 		getContentPane().add(bpanel, BorderLayout.SOUTH);
 		
-		//½¨Á¢3¸ö°´Å¦,½«3¸öbuttonÌíÈëbpanel
-		JButton button1 = new JButton("ÈËÏÈÊÖ");
-		JButton button2 = new JButton("»úÆ÷ÏÈÊÖ");
-		JButton button3 = new JButton("¿ªÊ¼");
-		JButton button4 = new JButton("ÖØĞÂ¿ªÊ¼");
+		//å»ºç«‹3ä¸ªæŒ‰çº½,å°†3ä¸ªbuttonæ·»å…¥bpanel
+		JButton button1 = new JButton("äººå…ˆæ‰‹");
+		JButton button2 = new JButton("æœºå™¨å…ˆæ‰‹");
+		JButton button3 = new JButton("å¼€å§‹");
+		JButton button4 = new JButton("é‡æ–°å¼€å§‹");
  		bpanel.add(button1);
 		bpanel.add(button2);
 		bpanel.add(button3);
 		bpanel.add(button4);
 		button3.setEnabled(false);
 		button4.setEnabled(false);
-		//button1µã»÷ÊÂ¼ş£¬ÉèÖÃispersonÎªtrue£¬²¢½«button1ÖÃÎª²»¿ÉÓÃ,button2Îª¿ÉÓÃ
+		//button1ç‚¹å‡»äº‹ä»¶ï¼Œè®¾ç½®ispersonä¸ºtrueï¼Œå¹¶å°†button1ç½®ä¸ºä¸å¯ç”¨,button2ä¸ºå¯ç”¨
 		button1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 					 button1.setEnabled(false);
@@ -89,7 +89,7 @@ public class FiveChessFrame extends JFrame{
 					 panel.isperson = true;
 			}
 		});
-		//button2µã»÷ÊÂ¼ş£¬ÉèÖÃispersonÎªnot£¬²¢½«button2ÖÃÎª²»¿ÉÓÃ,button1Îª¿ÉÓÃ
+		//button2ç‚¹å‡»äº‹ä»¶ï¼Œè®¾ç½®ispersonä¸ºnotï¼Œå¹¶å°†button2ç½®ä¸ºä¸å¯ç”¨,button1ä¸ºå¯ç”¨
 		button2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 					 button2.setEnabled(false);
@@ -99,7 +99,7 @@ public class FiveChessFrame extends JFrame{
 			}
 		});
 		
-		//button3µã»÷ÊÂ¼ş£¬²¢½«button1ºÍbutton2ÖÃÎª²»¿ÉÓÃ,isbeginÎªtrue
+		//button3ç‚¹å‡»äº‹ä»¶ï¼Œå¹¶å°†button1å’Œbutton2ç½®ä¸ºä¸å¯ç”¨,isbeginä¸ºtrue
 		button3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 					 button2.setEnabled(false);
@@ -114,7 +114,7 @@ public class FiveChessFrame extends JFrame{
 					 }
 			}
 		});
-		//button4µã»÷ÊÂ¼ş£¬²¢½«button1ºÍbutton2ÖÃÎª¿ÉÓÃ,isbeginÎªfalse
+		//button4ç‚¹å‡»äº‹ä»¶ï¼Œå¹¶å°†button1å’Œbutton2ç½®ä¸ºå¯ç”¨,isbeginä¸ºfalse
 		button4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 					 button2.setEnabled(true);
@@ -127,7 +127,7 @@ public class FiveChessFrame extends JFrame{
 			}
 		});
 		
-		//ÏÔÊ¾³ö´°Ìå
+		//æ˜¾ç¤ºå‡ºçª—ä½“
 		this.setVisible(true);
 		
 	}
@@ -136,23 +136,23 @@ public class FiveChessFrame extends JFrame{
 
 	
 	
-	//ÅĞ¶ÏÊÇ·ñÊ¤Àû
+	//åˆ¤æ–­æ˜¯å¦èƒœåˆ©
 		
 }
 
 
 class majorpanel extends JPanel implements MouseListener{
-	//±³¾°Í¼Æ¬
+	//èƒŒæ™¯å›¾ç‰‡
 		BufferedImage bgimg = null;
 		BufferedImage blackc = null;
 		BufferedImage whitec = null;
-		//´æ´¢ËùÓĞÆå×ÓµÄÎ»ÖÃ£¬0Îª¿Õ£¬1ÎªºÚ×Ó£¬2Îª°××Ó
+		//å­˜å‚¨æ‰€æœ‰æ£‹å­çš„ä½ç½®ï¼Œ0ä¸ºç©ºï¼Œ1ä¸ºé»‘å­ï¼Œ2ä¸ºç™½å­
 		int[][] allchess = new int[15][15];
 		int x = 0;
 		int y = 0;
-		boolean isperson = true;//¶¨ÒåÄÄ·½ÏÈÊÖ£¬Ä¬ÈÏtrueÎªÈËÏÈÊÖ£¬falseÎª»úÆ÷ÏÈÊÖ
+		boolean isperson = true;//å®šä¹‰å“ªæ–¹å…ˆæ‰‹ï¼Œé»˜è®¤trueä¸ºäººå…ˆæ‰‹ï¼Œfalseä¸ºæœºå™¨å…ˆæ‰‹
 		boolean isbegin = false;
-		boolean isBlack = true;//ÊÇ·ñ¿ÉÒÔÏÂºÚ×Ó
+		boolean isBlack = true;//æ˜¯å¦å¯ä»¥ä¸‹é»‘å­
 
 		public void paint(Graphics g){
 			
@@ -162,13 +162,13 @@ class majorpanel extends JPanel implements MouseListener{
 				whitec = ImageIO.read(new File("./jpg/whitechess.png"));
 
 			} catch (IOException e) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				e.printStackTrace();
 			}
 		
 			char bgl='A';
 			g.drawImage(bgimg, 0, 0, this);
-			//»­ºáÊúÏß
+			//ç”»æ¨ªç«–çº¿
 			for(int i=0;i<15;i++,bgl++)
 			{
 				g.drawLine(30, 20+30*i, 450, 20+30*i);
@@ -177,14 +177,14 @@ class majorpanel extends JPanel implements MouseListener{
 				g.drawString(""+(i+1), 15, 25+30*i);
 
 			}
-			//±ê×¢µãÎ»
+			//æ ‡æ³¨ç‚¹ä½
 			g.fillOval(236, 226, 8, 8);//8 H
 			g.fillOval(117, 107, 6, 6);//4 D
 			g.fillOval(357, 107, 6, 6);//4 L
 			g.fillOval(117, 347, 6, 6);//12 D
 			g.fillOval(357, 347, 6, 6);//12 L
 
-			//»­Æå×Ó
+			//ç”»æ£‹å­
 			for(int i=0;i<15;i++)
 			{
 				for(int j=0;j<15;j++)
@@ -209,13 +209,13 @@ class majorpanel extends JPanel implements MouseListener{
 		
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 		}
 
 		@Override
 		public void mousePressed(MouseEvent e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			if(isbegin == true)
 			{
 				x = e.getX();
@@ -225,7 +225,7 @@ class majorpanel extends JPanel implements MouseListener{
 				{
 					x = (x-25)/30;
 					y = (y-35)/30;
-					//ÅĞ¶Ïµ±Ç°Î»ÖÃÊÇ·ñÓĞÆå×Ó
+					//åˆ¤æ–­å½“å‰ä½ç½®æ˜¯å¦æœ‰æ£‹å­
 					if(allchess[x][y] == 0)
 					{
 						if(isBlack == true)
@@ -243,17 +243,17 @@ class majorpanel extends JPanel implements MouseListener{
 							}
 						}
 					}else{
-						JOptionPane.showMessageDialog(this, "µ±Ç°Î»ÖÃÒÑ¾­ÓĞÆå×Ó£¬ÇëÖØĞÂÑ¡ÔñÎ»ÖÃ");
+						JOptionPane.showMessageDialog(this, "å½“å‰ä½ç½®å·²ç»æœ‰æ£‹å­ï¼Œè¯·é‡æ–°é€‰æ‹©ä½ç½®");
 					}
 					
 					if(this.checkWin(x,y) == true)
 					{
-						JOptionPane.showMessageDialog(this,"ÓÎÏ·½áÊø£¡"+(allchess[x][y]==1?"ºÚ·½Ê¤³ö":"°×·½Ê¤³ö"));
+						JOptionPane.showMessageDialog(this,"æ¸¸æˆç»“æŸï¼"+(allchess[x][y]==1?"é»‘æ–¹èƒœå‡º":"ç™½æ–¹èƒœå‡º"));
 						isbegin = false;
 					}
 					else if(this.checkfull())
 					{
-						JOptionPane.showMessageDialog(this,"ºÍÆå£¬ÓÎÏ·½áÊø£¡");
+						JOptionPane.showMessageDialog(this,"å’Œæ£‹ï¼Œæ¸¸æˆç»“æŸï¼");
 						isbegin = false;
 					}
 					else if(isBlack == false)
@@ -268,29 +268,29 @@ class majorpanel extends JPanel implements MouseListener{
 
 		@Override
 		public void mouseReleased(MouseEvent e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 		}
 
 		@Override
 		public void mouseEntered(MouseEvent e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 		}
 
 		@Override
 		public void mouseExited(MouseEvent e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 		}
 		
-		//ÅĞ¶ÏÊÇ·ñÓ®ÁË
+		//åˆ¤æ–­æ˜¯å¦èµ¢äº†
 		private boolean checkWin(int x,int y){
 			boolean flag = false;
 			int count = 0;
 			int color = allchess[x][y];
 			
-			//ºáÏòÅĞ¶ÏÊÇ·ñÁ¬³ÉÎå×Ó£»
+			//æ¨ªå‘åˆ¤æ–­æ˜¯å¦è¿æˆäº”å­ï¼›
 			for(int i=0;i<15;i++)
 			{
 				if(color == allchess[i][y])
@@ -305,7 +305,7 @@ class majorpanel extends JPanel implements MouseListener{
 				}
 			}
 			
-			//ÊúÏòÅĞ¶ÏÊÇ·ñÁ¬³ÉÎå×Ó£»
+			//ç«–å‘åˆ¤æ–­æ˜¯å¦è¿æˆäº”å­ï¼›
 			for(int i=0;i<15;i++)
 			{
 				if(color == allchess[x][i])
@@ -320,7 +320,7 @@ class majorpanel extends JPanel implements MouseListener{
 				}
 			}
 			
-			//Ğ±ÏòÅĞ¶ÏÊÇ·ñÁ¬³ÉÎå×Ó(×óÉÏ¡¢ÓÒÏÂ)£»
+			//æ–œå‘åˆ¤æ–­æ˜¯å¦è¿æˆäº”å­(å·¦ä¸Šã€å³ä¸‹)ï¼›
 			int i2=1;
 			int count2=1;
 			while((x+i2)<15 && (y+i2)<15 && (color == allchess[x+i2][y+i2])){
@@ -337,7 +337,7 @@ class majorpanel extends JPanel implements MouseListener{
 				flag=true;
 			}
 			
-			//Ğ±ÏòÅĞ¶ÏÊÇ·ñÁ¬³ÉÎå×Ó(×óÏÂ¡¢ÓÒÉÏ)£»
+			//æ–œå‘åˆ¤æ–­æ˜¯å¦è¿æˆäº”å­(å·¦ä¸‹ã€å³ä¸Š)ï¼›
 			int i3=1;
 			int count3=1;
 			while((x+i3)<15 && (y-i3)>=0 && (color == allchess[x+i3][y-i3])){
@@ -360,7 +360,7 @@ class majorpanel extends JPanel implements MouseListener{
 			return flag;
 		}
 
-		//ÅĞ¶ÏÆåÃæÉÏÊÇ·ñ»¹ÓĞ¿ÉÏÂµÄ×Ó£¬ÒÔ±ãÅĞ¶ÏÊÇ·ñºÍÆå
+		//åˆ¤æ–­æ£‹é¢ä¸Šæ˜¯å¦è¿˜æœ‰å¯ä¸‹çš„å­ï¼Œä»¥ä¾¿åˆ¤æ–­æ˜¯å¦å’Œæ£‹
 		private boolean checkfull()
 		{
 			boolean full = false;
@@ -381,10 +381,10 @@ class majorpanel extends JPanel implements MouseListener{
 			return full;
 		}
 	/*	
-		//¼«Ğ¡¼«´óËã·¨
+		//æå°æå¤§ç®—æ³•
 		int val;
-		step aaa = new step();	//¼ÇÂ¼×î¼ÑµÄ²½Êı
-		step guji = new step();	//¼ÇÂ¼µ±Ç°±éÀúµÄ²½Êı
+		step aaa = new step();	//è®°å½•æœ€ä½³çš„æ­¥æ•°
+		step guji = new step();	//è®°å½•å½“å‰éå†çš„æ­¥æ•°
 		int best = Integer.MIN_VALUE;
 
 		private int MinMax(int depth){
@@ -439,7 +439,7 @@ class majorpanel extends JPanel implements MouseListener{
 		}
 	*/
 
-			//°×ÆåÎ»ÖÃËã·¨
+			//ç™½æ£‹ä½ç½®ç®—æ³•
 		private void Algorithm(){
 			
 		
@@ -482,12 +482,12 @@ class majorpanel extends JPanel implements MouseListener{
 			}
 			if(checkWin(x,y) == true)
 			{
-				JOptionPane.showMessageDialog(this,"ÓÎÏ·½áÊø£¡"+(allchess[x][y]==1?"ºÚ·½Ê¤³ö":"°×·½Ê¤³ö"));
+				JOptionPane.showMessageDialog(this,"æ¸¸æˆç»“æŸï¼"+(allchess[x][y]==1?"é»‘æ–¹èƒœå‡º":"ç™½æ–¹èƒœå‡º"));
 				isbegin = false;
 			}
 			else if(this.checkfull())
 			{
-				JOptionPane.showMessageDialog(this,"ºÍÆå£¬ÓÎÏ·½áÊø£¡");
+				JOptionPane.showMessageDialog(this,"å’Œæ£‹ï¼Œæ¸¸æˆç»“æŸï¼");
 				isbegin = false;
 			}
 
@@ -495,20 +495,20 @@ class majorpanel extends JPanel implements MouseListener{
 		}
 		
 
-		//ÆÀ·ÖËã·¨£¬¼ÆËã¸Ãµã×Ü·Ö
+		//è¯„åˆ†ç®—æ³•ï¼Œè®¡ç®—è¯¥ç‚¹æ€»åˆ†
 		private int Score(int x,int y){
-			int Score = 0; //µ±Ç°µãµÄËùÓĞÎåÔª×éµÄ·ÖÊıÖ®ºÍ
-			int yn = 0;	//ÎåÔª×éµĞ·½Æå×Ó£¨ÈôÈËÏÈÊÖÔòÎªºÚÆå£©¸öÊı
-			int mn = 0;	//ÎåÔª×é¼º·½Æå×Ó£¨Èô»úÆ÷ÏÈÊÖÔòÎªºÚÆå£©¸öÊı
-			int yc = 1;	//¶¨ÒåµĞ·½Æå×ÓµÄÑÕÉ«£¬1ÎªºÚÉ«£¬2Îª°×É«
+			int Score = 0; //å½“å‰ç‚¹çš„æ‰€æœ‰äº”å…ƒç»„çš„åˆ†æ•°ä¹‹å’Œ
+			int yn = 0;	//äº”å…ƒç»„æ•Œæ–¹æ£‹å­ï¼ˆè‹¥äººå…ˆæ‰‹åˆ™ä¸ºé»‘æ£‹ï¼‰ä¸ªæ•°
+			int mn = 0;	//äº”å…ƒç»„å·±æ–¹æ£‹å­ï¼ˆè‹¥æœºå™¨å…ˆæ‰‹åˆ™ä¸ºé»‘æ£‹ï¼‰ä¸ªæ•°
+			int yc = 1;	//å®šä¹‰æ•Œæ–¹æ£‹å­çš„é¢œè‰²ï¼Œ1ä¸ºé»‘è‰²ï¼Œ2ä¸ºç™½è‰²
 			int mc = 2;
-			if(!isperson)//Èô»úÆ÷ÏÈÊÖ
+			if(!isperson)//è‹¥æœºå™¨å…ˆæ‰‹
 			{
 				yc = 2;
 				mc = 1;
 			}
 			
-			//ºáÏò
+			//æ¨ªå‘
 			for(int i=0;i<5;i++)
 			{
 				yn=mn=0;
@@ -537,7 +537,7 @@ class majorpanel extends JPanel implements MouseListener{
 				Score += tpScore;
 			}
 			
-			//ÊúÏò
+			//ç«–å‘
 			for(int i=0;i<5;i++)
 			{
 				yn=mn=0;
@@ -566,7 +566,7 @@ class majorpanel extends JPanel implements MouseListener{
 				Score += tpScore;
 			}
 
-			//Ğ±ÉÏ£¨×óÏÂ£¬ÓÒÉÏ£©
+			//æ–œä¸Šï¼ˆå·¦ä¸‹ï¼Œå³ä¸Šï¼‰
 			for(int i=0;i<5;i++)
 			{
 				yn=mn=0;
@@ -595,7 +595,7 @@ class majorpanel extends JPanel implements MouseListener{
 				Score += tpScore;
 			}
 			
-			//Ğ±ÏÂ£¨×óÉÏ£¬ÓÒÏÂ£©
+			//æ–œä¸‹ï¼ˆå·¦ä¸Šï¼Œå³ä¸‹ï¼‰
 			
 			for(int i=0;i<5;i++)
 			{
@@ -630,7 +630,7 @@ class majorpanel extends JPanel implements MouseListener{
 		
 		}
 		
-		//ÅĞ¶Ï¸ÃµãÊÇ·ñÔÚÆåÅÌÉÏ
+		//åˆ¤æ–­è¯¥ç‚¹æ˜¯å¦åœ¨æ£‹ç›˜ä¸Š
 		private boolean PointInP(int x,int y)
 		{
 			if(x>=0 && x<15 && y>=0 && y<15)
@@ -643,8 +643,8 @@ class majorpanel extends JPanel implements MouseListener{
 			}
 		}
 
-		//ÓëÆÀ·Ö±í¶Ô±ÈµÃµ½·ÖÊı
-		private int SingleArray(int yn,int mn)//yn´ú±íµĞ·½£¬mn´ú±í¼º·½
+		//ä¸è¯„åˆ†è¡¨å¯¹æ¯”å¾—åˆ°åˆ†æ•°
+		private int SingleArray(int yn,int mn)//ynä»£è¡¨æ•Œæ–¹ï¼Œmnä»£è¡¨å·±æ–¹
 		{
 			int temp = 0;
 			if(yn == 0)
